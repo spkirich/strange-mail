@@ -25,6 +25,9 @@ class Box:
         with open(self.path, "r") as file:
             mail = json.load(file)
 
+        if len(mail) == 0:
+            return "К сожалению, пока ящик пуст..."
+
         # Идентификатор выбранного сообщения
         message_id = random.randrange(len(mail))
 
