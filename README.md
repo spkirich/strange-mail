@@ -38,6 +38,9 @@ docker run -d --mount type=volume,src=strange-mail-data,target=/app/data \
   strange-mail
 ```
 
+ID пользователя можно получить с помощью
+[этого бота](https://t.me/getmyid_bot).
+
 ### Без использования Docker
 
 Клонируйте репозиторий:
