@@ -32,9 +32,9 @@ docker volume create strange-mail-data
 
 ``` bash
 docker run -d --mount type=volume,src=strange-mail-data,target=/app/data \
-  -e SM_TOKEN=<токен Telegram-бота> \
-  -e SM_USER1=<ID пользователя № 1> \
-  -e SM_USER2=<ID пользователя № 2> \
+  -e SM_TOKEN="<токен Telegram-бота>" \
+  -e SM_USER1="<ID пользователя № 1>" \
+  -e SM_USER2="<ID пользователя № 2>" \
   strange-mail
 ```
 
@@ -55,9 +55,9 @@ pip install -r strange-mail/requirements.txt
 Настройте окружение:
 
 ``` bash
-export SM_TOKEN=<токен Telegram-бота>
-export SM_USER1=<ID пользователя № 1>
-export SM_USER2=<ID пользователя № 2>
+export SM_TOKEN="<токен Telegram-бота>"
+export SM_USER1="<ID пользователя № 1>"
+export SM_USER2="<ID пользователя № 2>"
 ```
 
 ID пользователя можно получить с помощью
