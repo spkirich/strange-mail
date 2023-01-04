@@ -25,13 +25,17 @@ docker build -t strange-mail strange-mail
 Создайте том для хранения сообщений:
 
 ``` bash
-docker volume create sm-data
+docker volume create strange-mail-data
 ```
 
 Запустите контейнер:
 
 ``` bash
-docker run -d --mount type=volume,src=sm-data,target=/app/data strange-mail
+docker run -d --mount type=volume,src=strange-mail-data,target=/app/data \
+  -e SM_TOKEN=<токен Telegram-бота> \
+  -e SM_USER1=<ID пользователя № 1> \
+  -e SM_USER2=<ID пользователя № 2> \
+  strange-mail
 ```
 
 ### Без использования Docker
@@ -51,7 +55,7 @@ pip install -r strange-mail/requirements.txt
 Настройте окружение:
 
 ``` bash
-export SM_TOKEN=<Токен Telegram-бота>
+export SM_TOKEN=<токен Telegram-бота>
 export SM_USER1=<ID пользователя № 1>
 export SM_USER2=<ID пользователя № 2>
 ```
