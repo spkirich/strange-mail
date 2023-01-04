@@ -6,7 +6,7 @@ from aiogram.utils import executor
 
 from box import Box
 
-# Токен Telegram-бота
+# Токен Telegram-бота.
 TOKEN = os.environ["SM_TOKEN"]
 
 USERS = (
@@ -22,15 +22,15 @@ GREETINGS = """Добро пожаловать на Странную почту!
 А чтобы читать сообщения, адресованные тебе, пользуйся командой /fetch
 """
 
-# Telegram-бот
+# Telegram-бот.
 bot = Bot(token=TOKEN)
 
-# Диспетчер Telegram-бота
+# Диспетчер Telegram-бота.
 dispatcher = Dispatcher(bot)
 
 boxes = {
-    USERS[0]: Box(f"{USERS[0]}.json"),
-    USERS[1]: Box(f"{USERS[1]}.json"),
+    USERS[0]: Box("data", f"{USERS[0]}.json"),
+    USERS[1]: Box("data", f"{USERS[1]}.json"),
 }
 
 
