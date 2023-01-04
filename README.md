@@ -69,5 +69,5 @@ ID пользователя можно получить с помощью
 Для запуска просто выполните следующую команду:
 
 ``` bash
-python strange-mail/bot.py
+python strange-mail/src/bot.py
 ```
