@@ -1,12 +1,12 @@
-FROM python:latest
+FROM python:3.10-slim
 
 WORKDIR /app
 
-# Перенесём файлы.
-COPY requirements.txt *.py .
+# Положим файлы в контейнер.
+COPY requirements.txt src ./
 
-# Установим зависимости.
+# Установим указанные зависимости.
 RUN pip install -r requirements.txt
 
-# Установим точку входа.
+# Укажем команду запуска бота.
 ENTRYPOINT ["python", "bot.py"]
